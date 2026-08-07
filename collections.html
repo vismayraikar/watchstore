@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections - WatchStore</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo span{
+    font-size:30px;
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+.cart{
+    font-size:18px;
+}
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    margin:40px 0 20px;
+    font-size:35px;
+}
+
+/* Products */
+
+.products{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding-bottom:40px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 12px rgba(0,0,0,.2);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    font-size:20px;
+    color:#444;
+}
+
+button{
+    margin:15px 0 20px;
+    padding:12px 25px;
+    border:none;
+    background:#111;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:gold;
+    color:black;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <span>⌚</span>
+        <h2>WatchStore</h2>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="cart">
+        🛒 Cart:
+        <span id="cart-count">0</span>
+    </div>
+
+</nav>
+
+<!-- Heading -->
+
+<h1 class="heading">Our Collections</h1>
+
+<!-- Products -->
+
+<div class="products">
+
+    <div class="card">
+        <img src="photo-1547996160-81dfa63595aa.jpg" alt="">
+        <h3>Rolex Explorer</h3>
+        <p>₹599</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="photo-1434056886845-dac89ffe9b56.jpg" alt="">
+        <h3>Omega Speedmaster</h3>
+        <p>₹799</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="photo-1523170335258-f5ed11844a49.jpg" alt="">
+        <h3>Casio G-Shock</h3>
+        <p>₹199</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+        <div class="card">
+        <img src="images (2).jpg" alt="rolex">
+        <h3>Casio G-Shock</h3>
+        <p>₹20000</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+        <div class="card">
+        <img src="images.jpg" alt="rolex watch">
+        <h3>Casio G-Shock</h3>
+        <p>₹1000</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+        <div class="card">
+        <img src="UGTriTd4o8Z6SEUEnNTzNd-1300-80.jpg" alt="rolex watch">
+        <h3>Casio G-Shock</h3>
+        <p>₹30000</p>
+        <button onclick="buy()">Buy Now</button>
+    </div>
+
+</div>
+
+<script>
+let cart = 0;
+
+function buy(){
+    cart++;
+    document.getElementById("cart-count").innerHTML = cart;
+    alert("Watch added successfully!");
+}
+</script>
+
+</body>
+</html>
