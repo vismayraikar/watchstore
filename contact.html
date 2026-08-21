@@ -1,178 +1,772 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
 <title>Contact - WatchStore</title>
+
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
 }
 
-body{
-    background:#f5f5f5;
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+
+    background: #f5f5f5;
+
+    min-height: 100vh;
+
 }
 
-/* Navbar */
 
-.navbar{
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 60px;
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 60px;
+
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
 }
 
-.logo span{
-    font-size:30px;
+
+.logo span {
+
+    font-size: 30px;
+
 }
 
-.logo h2{
-    font-size:20px;
+
+.logo h2 {
+
+    font-size: 20px;
+
 }
 
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:35px;
+
+/* NAVIGATION */
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+
 }
 
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-size:17px;
-    transition:.3s;
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: .3s;
+
 }
 
-.nav-links a:hover{
-    color:gold;
+
+.nav-links a:hover {
+
+    color: gold;
+
 }
 
-.cart{
-    font-size:18px;
+
+/* CART */
+
+.cart {
+
+    font-size: 18px;
+
 }
 
-/* Contact Form */
 
-.container{
-    width:500px;
-    margin:60px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 10px rgba(0,0,0,.2);
+/* ============================= */
+/* CONTACT CONTAINER */
+/* ============================= */
+
+.container {
+
+    width: 500px;
+
+    max-width: 90%;
+
+    margin: 60px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.2);
+
 }
 
-.container h1{
-    text-align:center;
-    margin-bottom:20px;
+
+.container h1 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
 }
+
+
+.container .subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ============================= */
+/* FORM */
+/* ============================= */
 
 input,
-textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
 }
 
-textarea{
-    resize:none;
+
+input:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: gold;
+
 }
 
-button{
-    width:100%;
-    background:black;
-    color:white;
-    padding:12px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
+
+textarea {
+
+    resize: none;
+
 }
 
-button:hover{
-    background:gold;
-    color:black;
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button {
+
+    width: 100%;
+
+    background: black;
+
+    color: white;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    margin-top: 10px;
+
+    transition: .3s;
+
+}
+
+
+button:hover {
+
+    background: gold;
+
+    color: black;
+
+}
+
+
+button:disabled {
+
+    background: #777;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ============================= */
+/* STATUS MESSAGE */
+/* ============================= */
+
+#status {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+
+.success {
+
+    color: green;
+
+}
+
+
+.error {
+
+    color: red;
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .cart {
+
+        display: none;
+
+    }
+
+
+    .container {
+
+        margin: 30px auto;
+
+        padding: 25px;
+
+    }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
-<!-- Navbar -->
+
+<!-- ================================== -->
+<!-- NAVBAR -->
+<!-- ================================== -->
 
 <nav class="navbar">
 
+
     <div class="logo">
+
         <span>⌚</span>
+
         <h2>WatchStore</h2>
+
     </div>
+
 
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="collections.html">Collections</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="collections.html">
+                Collections
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </li>
+
     </ul>
 
+
     <div class="cart">
+
         🛒 Cart:
-        <span id="cart-count">0</span>
+
+        <span id="cart-count">
+            0
+        </span>
+
     </div>
+
 
 </nav>
 
-<!-- Contact Form -->
+
+
+<!-- ================================== -->
+<!-- CONTACT FORM -->
+<!-- ================================== -->
 
 <div class="container">
 
-    <h1>Contact Us</h1>
+
+    <h1>
+        Contact Us
+    </h1>
+
+
+    <p class="subtitle">
+
+        Have a question?
+        Send us a message.
+
+    </p>
+
+
 
     <form id="contactForm">
 
-        <input type="text" placeholder="Your Name" required>
 
-        <input type="email" placeholder="Your Email" required>
+        <!-- NAME -->
 
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
 
-        <button type="submit">Send Message</button>
+
+
+        <!-- EMAIL -->
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+
+
+
+        <!-- MESSAGE -->
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            id="submitButton"
+        >
+
+            Send Message
+
+        </button>
+
 
     </form>
 
+
+
+    <!-- STATUS -->
+
+    <div id="status"></div>
+
+
 </div>
+
+
+
+<!-- ================================== -->
+<!-- JAVASCRIPT -->
+<!-- ================================== -->
 
 <script>
 
-document.getElementById("contactForm").addEventListener("submit", function(e){
 
-    e.preventDefault();
+/*
+====================================================
+IMPORTANT
+====================================================
 
-    alert("Thank you! Your message has been sent.");
+PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW.
 
-    this.reset();
+Example:
 
-});
+https://script.google.com/macros/s/XXXXXXXX/exec
+
+====================================================
+*/
+
+
+const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwcBRU03G9SY7iLJlqSvhuSGAxAg-3_382mM3b4IrI1LGETzN_Ozk9eUHyhCWjo7rEZ/exec";
+
+
+
+/*
+====================================================
+GET HTML ELEMENTS
+====================================================
+*/
+
+const form =
+    document.getElementById("contactForm");
+
+
+const submitButton =
+    document.getElementById("submitButton");
+
+
+const status =
+    document.getElementById("status");
+
+
+
+/*
+====================================================
+FORM SUBMISSION
+====================================================
+*/
+
+form.addEventListener(
+    "submit",
+    async function(event) {
+
+
+        // Stop normal form submission
+
+        event.preventDefault();
+
+
+
+        /*
+        ================================================
+        CHECK GOOGLE URL
+        ================================================
+        */
+
+        if (
+            GOOGLE_SCRIPT_URL ===
+            "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"
+        ) {
+
+            status.textContent =
+                "Please add your Google Apps Script URL.";
+
+            status.className = "error";
+
+            return;
+
+        }
+
+
+
+        /*
+        ================================================
+        GET FORM VALUES
+        ================================================
+        */
+
+        const name =
+            document.getElementById("name").value.trim();
+
+
+        const email =
+            document.getElementById("email").value.trim();
+
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+
+        /*
+        ================================================
+        CHECK VALUES
+        ================================================
+        */
+
+        if (
+            name === "" ||
+            email === "" ||
+            message === ""
+        ) {
+
+            status.textContent =
+                "Please fill in all fields.";
+
+            status.className = "error";
+
+            return;
+
+        }
+
+
+
+        /*
+        ================================================
+        DISABLE BUTTON
+        ================================================
+        */
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+            "Sending...";
+
+
+        status.textContent =
+            "";
+
+
+
+        /*
+        ================================================
+        CREATE FORM DATA
+        ================================================
+        */
+
+        const formData =
+            new FormData();
+
+
+        formData.append(
+            "name",
+            name
+        );
+
+
+        formData.append(
+            "email",
+            email
+        );
+
+
+        formData.append(
+            "message",
+            message
+        );
+
+
+
+        /*
+        ================================================
+        SEND DATA TO GOOGLE
+        ================================================
+        */
+
+        try {
+
+
+            await fetch(
+                GOOGLE_SCRIPT_URL,
+                {
+
+                    method: "POST",
+
+                    body: formData,
+
+                    mode: "no-cors"
+
+                }
+            );
+
+
+
+            /*
+            ============================================
+            SUCCESS
+            ============================================
+            */
+
+            status.textContent =
+                "✓ Thank you! Your message has been sent successfully.";
+
+            status.className =
+                "success";
+
+
+            /*
+            ============================================
+            CLEAR FORM
+            ============================================
+            */
+
+            form.reset();
+
+
+        }
+
+
+        catch (error) {
+
+
+            /*
+            ============================================
+            ERROR
+            ============================================
+            */
+
+            console.error(error);
+
+
+            status.textContent =
+                "✗ Something went wrong. Please try again.";
+
+            status.className =
+                "error";
+
+        }
+
+
+
+        /*
+        ================================================
+        ENABLE BUTTON
+        ================================================
+        */
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+            "Send Message";
+
+
+    }
+
+);
 
 </script>
 
+
 </body>
+
 </html>
