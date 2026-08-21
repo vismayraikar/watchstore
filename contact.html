@@ -5,10 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Contact - WatchStore</title>
 
@@ -20,15 +18,10 @@
 ========================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
     font-family: Arial, sans-serif;
-
 }
 
 
@@ -37,11 +30,8 @@
 ========================= */
 
 body {
-
     background: #f5f5f5;
-
     min-height: 100vh;
-
 }
 
 
@@ -50,88 +40,56 @@ body {
 ========================= */
 
 .navbar {
-
     background: #111;
-
     color: white;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     padding: 18px 60px;
-
 }
 
 
-/* LOGO */
-
 .logo {
-
     display: flex;
-
     align-items: center;
-
     gap: 10px;
-
 }
 
 
 .logo span {
-
     font-size: 30px;
-
 }
 
 
 .logo h2 {
-
     font-size: 20px;
-
 }
 
 
-/* NAV LINKS */
-
 .nav-links {
-
     display: flex;
-
     list-style: none;
-
     gap: 35px;
-
 }
 
 
 .nav-links a {
-
     color: white;
-
     text-decoration: none;
-
     font-size: 17px;
-
     transition: .3s;
-
 }
 
 
 .nav-links a:hover {
-
     color: gold;
-
 }
 
 
-/* CART */
-
 .cart {
-
     font-size: 18px;
-
 }
 
 
@@ -142,7 +100,6 @@ body {
 .container {
 
     width: 500px;
-
     max-width: 90%;
 
     margin: 60px auto;
@@ -155,33 +112,25 @@ body {
 
     box-shadow:
         0 5px 15px
-        rgba(0, 0, 0, .2);
-
+        rgba(0,0,0,.2);
 }
 
 
 .container h1 {
-
     text-align: center;
-
     margin-bottom: 10px;
-
 }
 
 
 .subtitle {
-
     text-align: center;
-
     color: #777;
-
     margin-bottom: 20px;
-
 }
 
 
 /* =========================
-   INPUTS
+   FORM
 ========================= */
 
 input,
@@ -198,7 +147,6 @@ textarea {
     border-radius: 5px;
 
     font-size: 16px;
-
 }
 
 
@@ -208,14 +156,11 @@ textarea:focus {
     outline: none;
 
     border-color: gold;
-
 }
 
 
 textarea {
-
     resize: none;
-
 }
 
 
@@ -244,7 +189,6 @@ button {
     margin-top: 10px;
 
     transition: .3s;
-
 }
 
 
@@ -253,7 +197,6 @@ button:hover {
     background: gold;
 
     color: black;
-
 }
 
 
@@ -262,12 +205,11 @@ button:disabled {
     background: #777;
 
     cursor: not-allowed;
-
 }
 
 
 /* =========================
-   STATUS MESSAGE
+   STATUS
 ========================= */
 
 #status {
@@ -279,7 +221,6 @@ button:disabled {
     font-size: 16px;
 
     font-weight: bold;
-
 }
 
 
@@ -296,7 +237,6 @@ button:disabled {
         flex-direction: column;
 
         gap: 15px;
-
     }
 
 
@@ -307,14 +247,12 @@ button:disabled {
         flex-wrap: wrap;
 
         justify-content: center;
-
     }
 
 
     .cart {
 
         display: none;
-
     }
 
 
@@ -323,7 +261,6 @@ button:disabled {
         margin: 30px auto;
 
         padding: 25px;
-
     }
 
 }
@@ -356,38 +293,30 @@ button:disabled {
 
 
         <li>
-
             <a href="index.html">
                 Home
             </a>
-
         </li>
 
 
         <li>
-
             <a href="collections.html">
                 Collections
             </a>
-
         </li>
 
 
         <li>
-
             <a href="about.html">
                 About
             </a>
-
         </li>
 
 
         <li>
-
             <a href="contact.html">
                 Contact
             </a>
-
         </li>
 
 
@@ -397,10 +326,7 @@ button:disabled {
     <div class="cart">
 
         🛒 Cart:
-
-        <span id="cart-count">
-            0
-        </span>
+        <span id="cart-count">0</span>
 
     </div>
 
@@ -422,10 +348,8 @@ button:disabled {
 
 
     <p class="subtitle">
-
         Have a question?
         Send us a message.
-
     </p>
 
 
@@ -437,7 +361,6 @@ button:disabled {
         <input
             type="text"
             name="name"
-            id="name"
             placeholder="Your Name"
             required
         >
@@ -448,7 +371,6 @@ button:disabled {
         <input
             type="email"
             name="email"
-            id="email"
             placeholder="Your Email"
             required
         >
@@ -458,7 +380,6 @@ button:disabled {
 
         <textarea
             name="message"
-            id="message"
             rows="6"
             placeholder="Your Message"
             required
@@ -480,8 +401,6 @@ button:disabled {
     </form>
 
 
-    <!-- STATUS -->
-
     <div id="status"></div>
 
 
@@ -497,20 +416,20 @@ button:disabled {
 
 
 /*
-================================================
-GOOGLE APPS SCRIPT URL
-================================================
+=================================================
+YOUR GOOGLE APPS SCRIPT WEB APP URL
+=================================================
 */
 
 const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbzVnuzAAScTiS8y1qgpGVRcvDkXJ-pFPdKfO21n59fS-AA4d0QG_Au2mdPjo5T1Hs9G_A/exec";
+    "https://script.google.com/macros/s/AKfycby-GFECTR66JDRAZsjvWAF_At1r2BGN4MQ88nMEfCekEjHyOG05YwrAzkYX77qwNLBB8w/exec";
 
 
 
 /*
-================================================
+=================================================
 GET FORM
-================================================
+=================================================
 */
 
 const form =
@@ -527,9 +446,9 @@ const status =
 
 
 /*
-================================================
-FORM SUBMIT
-================================================
+=================================================
+SUBMIT FORM
+=================================================
 */
 
 form.addEventListener(
@@ -537,22 +456,20 @@ form.addEventListener(
     async function(event) {
 
 
-        // Stop page refresh
-
         event.preventDefault();
 
 
-
         /*
-        ========================================
-        SHOW SENDING
-        ========================================
+        -----------------------------------------
+        BUTTON
+        -----------------------------------------
         */
 
         button.disabled = true;
 
         button.innerText =
             "Sending...";
+
 
         status.innerText =
             "Please wait...";
@@ -561,26 +478,23 @@ form.addEventListener(
             "#555";
 
 
-
         /*
-        ========================================
-        GET FORM DATA
-        ========================================
+        -----------------------------------------
+        FORM DATA
+        -----------------------------------------
         */
 
         const formData =
             new FormData(form);
 
 
-
         /*
-        ========================================
+        -----------------------------------------
         SEND TO GOOGLE APPS SCRIPT
-        ========================================
+        -----------------------------------------
         */
 
         try {
-
 
             await fetch(
                 SCRIPT_URL,
@@ -596,11 +510,10 @@ form.addEventListener(
             );
 
 
-
             /*
-            ====================================
+            -------------------------------------
             SUCCESS
-            ====================================
+            -------------------------------------
             */
 
             status.innerText =
@@ -611,25 +524,18 @@ form.addEventListener(
 
 
             /*
-            ====================================
+            -------------------------------------
             CLEAR FORM
-            ====================================
+            -------------------------------------
             */
 
             form.reset();
-
 
         }
 
 
         catch (error) {
 
-
-            /*
-            ====================================
-            ERROR
-            ====================================
-            */
 
             console.error(
                 "Error:",
@@ -638,7 +544,7 @@ form.addEventListener(
 
 
             status.innerText =
-                "✗ Failed to send message. Please try again.";
+                "✗ Failed to send message.";
 
             status.style.color =
                 "red";
@@ -646,11 +552,10 @@ form.addEventListener(
         }
 
 
-
         /*
-        ========================================
+        -----------------------------------------
         ENABLE BUTTON
-        ========================================
+        -----------------------------------------
         */
 
         button.disabled = false;
@@ -660,7 +565,6 @@ form.addEventListener(
 
 
     }
-
 );
 
 </script>
